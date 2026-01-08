@@ -5,13 +5,8 @@
 import socket
 import random
 import string
+from src.domain_info.domain_info import get_ip_from_domain
 
-def get_ip_from_domain(domain_name):
-    try:
-        ip_address=socket.gethostbyname(domain_name)
-        return ip_address
-    except socket.gaierror:
-        return None
 
 #Wildcard is a mechanism in which DNS resolves even for invalid domains and subdomains since internet is designed to return
 #something anyways, invalid subdomain resolve means, a server responds, not that it's valid

@@ -3,13 +3,7 @@
 #error=a port not responding (filtered port)
 
 import socket
-
-def get_ip_from_domain(domain_name):
-    try:
-        ip_address= socket.gethostbyname(domain_name)
-        return ip_address
-    except socket.gaierror:
-        return None
+from src.domain_info.domain_info import get_ip_from_domain
 
 #create a socket object and check TCP connectivity using brute force(known ports)
 def port_scanner(ip_address):
