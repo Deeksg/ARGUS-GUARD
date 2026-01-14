@@ -66,7 +66,7 @@ def detect_http_wildcard(domain_name):
     fake_http=get_http_fingerprint(fake_host, real_http["protocol"])
 
     #this defined dictionary will be returned
-    wildcard={"wildcard_detected":None, "confidence":None, "protocol":None, "comparison_summary":{},"notes":[]}
+    wildcard={"wildcard_detected":None, "confidence":None, "protocol":None,"fake_host_fingerprint":fake_http,"comparison_summary":{},"notes":[]}
 
 
     #if both real and fake host reply on http then comparable
